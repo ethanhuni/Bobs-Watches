@@ -80,6 +80,7 @@
 }
 
 .brand-tile img {
+    background: var(--white);
     border-radius: 15px;
     z-index: 1;
     transition: .2s ease-in-out;
