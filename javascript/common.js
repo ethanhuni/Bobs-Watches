@@ -1,5 +1,5 @@
 
-const SCROLL_FADE = 50;
+const SCROLL_FADE = 350;
 
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
