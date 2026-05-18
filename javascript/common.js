@@ -9,3 +9,7 @@ window.addEventListener('scroll', () => {
         nav.classList.remove('scrolled');
     }
 })
+
+function gotoList(value="") {
+    window.location.href = `file:///C:/Users/Lenovo/Documents/Development/Bobs-Watches/list.html?filter=${value}`;
+}

@@ -5,7 +5,6 @@ inputField.addEventListener("keydown", function(event) {
     const content = event.target.value;
 
     if (event.key === "Enter") {
-        event.preventDefault();
-        console.log("Value:", content);
+        window.location.href = `file:///C:/Users/Lenovo/Documents/Development/Bobs-Watches/list.html?filter=${content}`;
     }
 });
