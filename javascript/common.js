@@ -11,5 +11,9 @@ window.addEventListener('scroll', () => {
 })
 
 function gotoList(value="") {
-    window.location.href = `file:///C:/Users/Lenovo/Documents/Development/Bobs-Watches/list.html?filter=${value}`;
+    window.location.href = `list.html?filter=${value}`;
+}
+
+function gotoProduct(product) {
+    alert(`Product: ${product}`);
 }
