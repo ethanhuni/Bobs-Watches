@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 
 :root {
-    --white: #fbfbfb;
+    --white: #ffffff;
     --dim: #716969;
     --graphite: #2d2e2e;
     --onyx: #0f0f0f;
@@ -45,6 +45,10 @@ nav {
     overflow: hidden;
     z-index: 1;
     transition: background 0.25s ease-in-out;
+}
+
+nav.static {
+    background-color: var(--graphite);
 }
 
 nav.scrolled {

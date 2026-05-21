@@ -15,5 +15,5 @@ function gotoList(value="") {
 }
 
 function gotoProduct(product) {
-    alert(`Product: ${product}`);
+    window.location.href = `product.html?filter=${product}`;
 }
