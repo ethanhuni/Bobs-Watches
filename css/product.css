@@ -32,17 +32,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30rem;
-    height: 30rem;
+    width: 40rem;
+    aspect-ratio: 1 / 1;
 }
 
 .frame img {
+    height: 100%;
     width: auto;
-    height: 30rem;
 }
 
 .info {
-    padding-top: 2rem;
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 1.2rem;
     font-family: "Faculty Glyphic", sans-serif;
     text-align: center;

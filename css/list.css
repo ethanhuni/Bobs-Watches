@@ -85,6 +85,8 @@
     display: flex;
     flex-wrap: wrap;
     padding: 1rem;
+    gap: 1rem;
+    padding-bottom: 10rem;
 }
 
 .product {
@@ -102,6 +104,11 @@
 
 .product:hover {
     transform: scale(1.05) rotate(5deg);
+    z-index: 10;
+}
+
+.collection:has(.product:hover) .product:not(:hover) {
+    filter: brightness(70%);
 }
 
 .product div {
