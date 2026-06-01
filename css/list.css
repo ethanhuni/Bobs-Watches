@@ -104,7 +104,7 @@
 
 .product:hover {
     transform: scale(1.05) rotate(5deg);
-    z-index: 10;
+    z-index: 2;
 }
 
 .collection:has(.product:hover) .product:not(:hover) {
