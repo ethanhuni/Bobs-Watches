@@ -20,7 +20,7 @@ const products = [
         "title" : "Burgundy Speedmaster '57",
         "brand" : "Omega",
         "price" : "$7,595",
-        "image" : "",
+        "image" : "src/Watch-Images/speed-front.avif",
         "source" : "https://www.bobswatches.com/omega/pre-owned-burgundy-dial-omega-speedmaster-57.html"
     },
     {
@@ -53,8 +53,8 @@ function gotoList(value="") {
     window.location.href = `list.html?filter=${value}`;
 }
 
-function gotoProduct(product) {
-    window.location.href = `product.html?filter=${product}`;
+function gotoProduct(id) {
+    window.location.href = `product.html?filter=${id}`;
 }
 
 function productTitle(id) {
