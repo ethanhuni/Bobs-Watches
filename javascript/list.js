@@ -20,7 +20,7 @@ function loadWatches() {
         product.querySelector("h1").innerHTML = productTitle(id);
         product.querySelector("h2").innerHTML = productBrand(id);
         product.querySelector("h3").innerHTML = productPrice(id);
-        product.querySelector("img").src = productThumb(id);
+        product.querySelector("img").src = productImg(id, "front");
     }
 }
 

@@ -39,6 +39,7 @@ const products = [
     }
 ]
 
+const basket = []
 
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
@@ -69,7 +70,13 @@ function productPrice(id) {
     return products[id]["price"];
 }
 
-function productThumb(id) {
+function productImg(id, angle) {
     const temp = products[id]["image"];
-    return `src/Watch-Images/${temp}-front.avif`;
+    return `src/Watch-Images/${temp}-${angle}.avif`;
+}
+
+
+
+function addCart(id) {
+    basket.push(id);
 }
