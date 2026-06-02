@@ -1,4 +1,8 @@
 
+body {
+
+}
+
 .main {
     color: var(--white);
     display: flex;
@@ -42,12 +46,34 @@
 }
 
 .info {
-    padding-top: 10rem;
+    width: 26rem;
+    padding: 5rem 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 1.2rem;
-    font-family: "Faculty Glyphic", sans-serif;
+    font-family: "DM Mono", sans-serif;
     text-align: center;
     flex-grow: 1;
+}
+
+.sub {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.info h1 {
+    font-weight: normal;
+}
+
+.info h2 {
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+
+.info h3 {
+    font-weight: bold;
+    color: var(--yellow);
+    font-size: 1.2rem;
 }

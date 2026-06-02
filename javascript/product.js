@@ -13,6 +13,14 @@ window.onload = function () {
     const urlParam = new URLSearchParams(window.location.search);
     productID = parseInt(urlParam.get("filter"))
     setImg()
+    loadData()
+}
+
+function loadData() {
+    const info = document.getElementById("info");
+    info.querySelector("h1").innerHTML = productTitle(productID);
+    info.querySelector("h2").innerHTML = productBrand(productID).toUpperCase();
+    info.querySelector("h3").innerHTML = productPrice(productID) + " AUD";
 }
 
 function imgScroll(forward) {
