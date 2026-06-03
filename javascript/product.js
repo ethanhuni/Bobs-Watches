@@ -17,7 +17,7 @@ window.onload = function () {
 }
 
 function loadData() {
-    const info = document.getElementById("info");
+    const info = document.getElementById("info-header");
     info.querySelector("h1").innerHTML = productTitle(productID);
     info.querySelector("h2").innerHTML = productBrand(productID).toUpperCase();
     info.querySelector("h3").innerHTML = productPrice(productID) + " AUD";
@@ -35,4 +35,11 @@ function imgScroll(forward) {
 function setImg() {
     const img = document.getElementById("img");
     img.src = productImg(productID, images[imgIndex]);
+}
+
+function buy() {
+    if (!basket.includes(productID)) {
+        addCart(productID);
+    }
+    window.location.href = `basket.html`;
 }

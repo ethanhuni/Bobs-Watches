@@ -75,8 +75,7 @@ function productImg(id, angle) {
     return `src/Watch-Images/${temp}-${angle}.avif`;
 }
 
-
-
 function addCart(id) {
     basket.push(id);
+    alert(id)
 }

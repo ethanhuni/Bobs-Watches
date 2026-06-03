@@ -55,6 +55,11 @@ body {
     font-family: "DM Mono", sans-serif;
     text-align: center;
     flex-grow: 1;
+    gap: 3.5rem;
+}
+
+.info-header {
+    width: 100%;
 }
 
 .sub {
@@ -63,17 +68,69 @@ body {
     justify-content: space-between;
 }
 
-.info h1 {
+.info-header h1 {
     font-weight: normal;
 }
 
-.info h2 {
+.info-header h2 {
     font-weight: lighter;
     font-size: 1.2rem;
 }
 
-.info h3 {
+.info-header h3 {
     font-weight: bold;
     color: var(--yellow);
     font-size: 1.2rem;
+}
+
+.info-facts {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+}
+
+.point {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 1rem;
+    padding: .5rem;
+}
+
+.point h1, h2 {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    font-weight: normal;
+}
+
+.point h2 {
+    color: var(--dim);
+}
+
+
+
+.point svg path {
+    stroke: var(--yellow);
+}
+
+button {
+    width: 90%;
+    aspect-ratio: 1 / .12;
+    background-color: var(--white);
+    font-family: "DM Mono", sans-serif;
+    font-size: 1.2rem;
+    font-weight: normal;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: 0.25s ease-in-out;
+    margin: 2rem 0;
+}
+
+button:hover {
+    background-color: var(--yellow);
 }
