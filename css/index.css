@@ -70,25 +70,30 @@
 }
 
 .brand-list {
+    padding: 0 1.5rem;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
 .brand-tile {
-    padding: 25px;
+    transition: .2s ease-in-out;
 }
 
 .brand-tile img {
     background: var(--white);
     border-radius: 15px;
     z-index: 1;
-    transition: .2s ease-in-out;
     cursor: pointer;
 }
 
-.brand-tile:hover img {
-    transform: scale(1.05) rotate(5deg);
+.brand-tile:hover {
+    transform: scale(1.05);
+}
+
+.brand-list:has(.brand-tile:hover) .brand-tile:not(:hover) {
+    filter: brightness(70%);
 }
 

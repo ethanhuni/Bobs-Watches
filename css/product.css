@@ -24,12 +24,12 @@ body {
 }
 
 .slider svg path {
-    fill: var(--dim);
+    stroke: var(--dim);
     transition: 0.2s;
 }
 
 .slider:hover svg path {
-    fill: var(--onyx);
+    stroke: var(--onyx);
 }
 
 .frame {

@@ -105,7 +105,7 @@
 }
 
 .product:hover {
-    transform: scale(1.05) rotate(5deg);
+    transform: scale(1.05);
     z-index: 2;
 }
 
@@ -125,9 +125,14 @@
 }
 
 .product {
-    font-family: "Faculty Glyphic", sans-serif;
+    font-family: "DM Mono", sans-serif;
     overflow: hidden;
 }
+
+.product h1, h2, h3 {
+    font-weight: normal;
+}
+
 
 .product-info {
     width: 100%;
