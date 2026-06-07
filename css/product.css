@@ -108,10 +108,8 @@ body {
 }
 
 .point h2 {
-    color: var(--dim);
+    color: var(--bone);
 }
-
-
 
 .point svg path {
     stroke: var(--yellow);
