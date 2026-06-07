@@ -18,8 +18,8 @@ window.onload = function () {
 function loadData() {
     const info = document.getElementById("info-header");
     info.querySelector("h1").innerHTML = productTitle(productID);
-    info.querySelector("h2").innerHTML = productBrand(productID).toUpperCase();
-    info.querySelector("h3").innerHTML = productPrice(productID) + " AUD";
+    document.getElementById("brand").innerHTML = productBrand(productID).toUpperCase();
+    document.getElementById("price").innerHTML = productPrice(productID) + " AUD";
 }
 
 function imgScroll(forward) {

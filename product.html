@@ -36,7 +36,7 @@
     </div>
 </nav>
 
-    <article class="main">
+    <main>
         <section class="image">
             <div class="slider" onclick="imgScroll(false)">
                 <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,8 +61,8 @@
             <div class="info-header" id="info-header">
                 <h1></h1>
                 <div class="sub">
-                    <h2></h2>
-                    <h3></h3>
+                    <h2 id="brand"></h2>
+                    <h2 id="year">2020</h2>
                 </div>
             </div>
 
@@ -116,10 +116,14 @@
                 </div>
             </div>
 
-            <button onclick="buy()">ADD TO CART</button>
+            <div class="CTA">
+                <h2 id="price">$- AUD</h2>
+                <button onclick="buy()">ADD TO CART</button>
+            </div>
+
 
         </section>
-    </article>
+    </main>
 
 </body>
 </html>
