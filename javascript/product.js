@@ -1,6 +1,5 @@
-
-var imgIndex = 0;
-var productID = 0;
+let imgIndex = 0;
+let productID = 0;
 
 const images = {
     0 : "front",

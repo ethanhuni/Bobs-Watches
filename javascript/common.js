@@ -77,5 +77,4 @@ function productImg(id, angle) {
 
 function addCart(id) {
     basket.push(id);
-    alert(id)
 }

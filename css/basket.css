@@ -1,0 +1,14 @@
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding-top: 64px;
+}
+
+.list {
+    background-color: var(--white);
+}
+
+.summary {
+    background-color: var(--dim);
+}
