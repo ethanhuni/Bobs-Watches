@@ -39,7 +39,15 @@ const products = [
     }
 ]
 
-const basket = []
+const CART_LIMIT = 3;
+let basket = []
+
+window.addEventListener("load", () => {
+    const sessionBasket = JSON.parse(sessionStorage.getItem("basket"));
+    if (sessionBasket) {
+        basket = sessionBasket;
+    }
+})
 
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
@@ -75,6 +83,21 @@ function productImg(id, angle) {
     return `src/Watch-Images/${temp}-${angle}.avif`;
 }
 
+function productYear(id) {
+    return "2020";
+}
+
 function addCart(id) {
-    basket.push(id);
+    if (basket.length < CART_LIMIT) {
+        basket.push(id);
+        sessionStorage.setItem("basket", JSON.stringify(basket));
+    } else {
+        console.log(`Cart is full, cannot add: ${productTitle(id)}`);
+    }
+    return false
+}
+
+function removeCart(idx) {
+    basket.splice(idx, 1);
+    sessionStorage.setItem("basket", JSON.stringify(basket));
 }

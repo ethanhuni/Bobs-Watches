@@ -1,14 +1,90 @@
 
+html, body {
+    height: 100%;
+}
+
 main {
     display: grid;
     grid-template-columns: 2fr 1fr;
     padding-top: 64px;
+    height: 90%;
+    background-color: var(--white);
 }
 
 .list {
-    background-color: var(--white);
+    background-color: var(--bone);
 }
 
 .summary {
     background-color: var(--dim);
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: lighter;
+    font-family: "DM Mono", sans-serif;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr 1fr;
+    background-color: var(--white);
+    padding: 1rem 2rem;
+    margin: 1rem;
+}
+
+li div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+li img {
+    padding: 0 0.5rem;
+    width: 80px;
+}
+
+li h2, li h3 {
+    font-size: 1.5em;
+    font-family: "DM Mono", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+li h2 {
+    font-weight: normal;
+    color: var(--onyx);
+}
+
+li h3 {
+    font-weight: lighter;
+    color: var(--graphite);
+}
+
+.right {
+    text-align: right;
+}
+
+.close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.close svg path {
+    stroke: var(--dim);
+}
+
+.close:hover svg path {
+    stroke: var(--graphite);
 }
