@@ -73,6 +73,12 @@ function calculateTotal() {
 
     discount = Math.floor(real_discount * subTotal);
     percent = real_discount*100 + "%";
+    if (real_discount === 0) {
+        percent = "";
+    }
+    if (subTotal <= 0) {
+        shipping = 0;
+    }
 
 
     total = subTotal + shipping - discount;
