@@ -36,7 +36,8 @@ h1 {
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0 0 2rem;
+    border-top: 4px solid var(--bone);
 }
 
 li {
@@ -164,4 +165,28 @@ table {
 
 #percent {
     color: var(--dim);
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 .25rem;
+}
+
+.buy {
+    width: 85%;
+    aspect-ratio: 1 / .15;
+    background-color: var(--bone);
+    font-family: "DM Mono", sans-serif;
+    font-size: 1.2rem;
+    font-weight: normal;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: 0.25s ease-in-out;
+    margin: 2rem 0;
+}
+
+.buy:hover {
+    background-color: var(--yellow);
 }

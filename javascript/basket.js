@@ -96,3 +96,7 @@ function calculateTotal() {
 function format(n) {
     return "$" + n.toLocaleString() + " AUD";
 }
+
+function proceed() {
+    alert("Yo!")
+}

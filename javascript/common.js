@@ -105,3 +105,4 @@ function removeCart(idx) {
     basket.splice(idx, 1);
     sessionStorage.setItem("basket", JSON.stringify(basket));
 }
+
