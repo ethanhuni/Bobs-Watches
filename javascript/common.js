@@ -5,41 +5,41 @@ const products = [
     {
         "title" : "Steel Submariner",
         "brand" : "Rolex",
-        "price" : "$15,795",
+        "price" : 15795,
         "image" : "submariner",
         "source" : "https://www.bobswatches.com/used-steel-rolex-submariner-ref-124060-black-no-date-dial.html"
     },
     {
         "title" : "GMT-Master II Pepsi",
         "brand" : "Rolex",
-        "price" : "$25,295",
+        "price" : 25295,
         "image" : "pepsi",
         "source" : "https://www.bobswatches.com/used-rolex-gmt-master-ii-pepsi-ref-126710blro-jubilee-band.html"
     },
     {
         "title" : "Burgundy Speedmaster '57",
         "brand" : "Omega",
-        "price" : "$7,595",
+        "price" : 7595,
         "image" : "speed",
         "source" : "https://www.bobswatches.com/omega/pre-owned-burgundy-dial-omega-speedmaster-57.html"
     },
     {
         "title" : "Calibre de Cartier",
         "brand" : "Cartier",
-        "price" : "$32,495",
+        "price" : 32495,
         "image" : "calibre",
         "source" : "https://www.bobswatches.com/cartier/pre-owned-cartier-calibre-de-cartier-w7100040-18k-rose-gold.html"
     },
     {
         "title" : "Black Bay GMT",
         "brand" : "Tutor",
-        "price" : "$5,295",
+        "price" : 5295,
         "image" : "bay",
         "source" : "https://www.bobswatches.com/tudor/pre-owned-tudor-black-bay-gmt-black-dial-ref-79833.html"
     }
 ]
 
-const CART_LIMIT = 3;
+const CART_LIMIT = 5;
 let basket = []
 
 window.addEventListener("load", () => {
@@ -75,6 +75,10 @@ function productBrand(id) {
 }
 
 function productPrice(id) {
+    return "$" + products[id]["price"].toLocaleString();
+}
+
+function productRealPrice(id) {
     return products[id]["price"];
 }
 

@@ -30,6 +30,24 @@ body {
 
     background-size:80px 140px;
     background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--graphite);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--dim);
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: var(--yellow);
 }
 
 nav {

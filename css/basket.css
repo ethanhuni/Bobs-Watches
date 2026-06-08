@@ -7,7 +7,7 @@ main {
     display: grid;
     grid-template-columns: 2fr 1fr;
     padding-top: 64px;
-    height: 90%;
+    min-height: 90%;
     background-color: var(--onyx);
 }
 
@@ -23,12 +23,13 @@ main {
     padding: 0 2rem;
     background: var(--white);
     text-align: center;
+    font-family: "Faculty Glyphic", sans-serif;
 }
 
 h1 {
     font-size: 3em;
     font-weight: normal;
-    font-family: "DM Mono", sans-serif;
+    font-family: "Faculty Glyphic", sans-serif;
     padding-top: 1rem;
 }
 
@@ -41,8 +42,7 @@ ul {
 li {
     display: grid;
     grid-template-columns: 1fr 4fr 2fr 1fr;
-    background-color: var(--white);
-    padding: 1rem 2rem;
+    padding: 1rem 0;
     margin: 1rem;
     border-bottom: 2px solid var(--bone);
 }
@@ -55,7 +55,7 @@ li div {
 }
 
 li img {
-    padding: 0 0.5rem;
+    margin: 0 1rem;
     width: 80px;
 }
 
@@ -93,4 +93,75 @@ li h3 {
 
 .close:hover svg path {
     stroke: var(--graphite);
+}
+
+.discount {
+    margin: 1rem;
+    text-align: left;
+}
+
+.d-entry {
+    display: flex;
+    margin-top: 5px;
+    border: var(--bone) 2px solid;
+    transition: .2s ease-in-out;
+}
+
+#code {
+    font-family: "Faculty Glyphic", sans-serif;
+    background-color: var(--white);
+    outline: none;
+    border-radius: 0;
+    margin: 0;
+    padding: .5rem;
+    width: 100%;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.d-entry button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--bone);
+    cursor: pointer;
+    width: 3.5rem;
+    transition: .2s ease-in-out;
+    outline: none;
+}
+
+.d-entry button:hover {
+    background-color: var(--yellow);
+}
+
+.d-entry button svg path {
+    stroke: var(--onyx);
+}
+
+.d-entry:has(button:hover) {
+    border: var(--yellow) 2px solid;
+}
+
+#msg {
+    min-height: 2rem;
+}
+
+table {
+    padding: 1rem .25rem;
+    margin: 0;
+    width: 100%;
+}
+
+.label {
+    text-align: left;
+}
+
+.value {
+    text-align: right;
+    color: var(--dim);
+}
+
+#percent {
+    color: var(--dim);
 }
