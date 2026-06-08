@@ -117,6 +117,13 @@ footer {
     place-items: center;
 }
 
-footer div {
-    background-color: var(--placehold);
+footer p {
+    font-family: "DM Mono", monospace;
+    color: var(--white);
+    cursor: pointer;
+}
+
+footer p:hover {
+    color: var(--yellow);
+    text-decoration: underline;
 }
