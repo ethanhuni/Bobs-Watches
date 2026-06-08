@@ -1,5 +1,10 @@
 
 const search = document.getElementById('search');
+const x = document.getElementById('x');
+
+x.addEventListener("click", function(event) {
+    fillSearch("");
+})
 
 window.onload = function () {
     const urlParam = new URLSearchParams(window.location.search);

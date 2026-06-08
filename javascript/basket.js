@@ -26,5 +26,5 @@ function hide(idx) {
 
 function remove(idx) {
     removeCart(idx);
-    hide(idx);
+    window.location.reload();
 }

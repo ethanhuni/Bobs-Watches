@@ -8,22 +8,27 @@ main {
     grid-template-columns: 2fr 1fr;
     padding-top: 64px;
     height: 90%;
-    background-color: var(--white);
+    background-color: var(--onyx);
 }
 
 .list {
-    background-color: var(--bone);
+    margin: 1.7rem 1rem;
+    padding: 0 2rem;
+    background: var(--white);
+    text-align: left;
 }
 
 .summary {
-    background-color: var(--dim);
+    margin: 1.7rem 1rem;
+    padding: 0 2rem;
+    background: var(--white);
+    text-align: center;
 }
 
 h1 {
     font-size: 3em;
-    font-weight: lighter;
+    font-weight: normal;
     font-family: "DM Mono", sans-serif;
-    text-align: center;
     padding-top: 1rem;
 }
 
@@ -39,6 +44,7 @@ li {
     background-color: var(--white);
     padding: 1rem 2rem;
     margin: 1rem;
+    border-bottom: 2px solid var(--bone);
 }
 
 li div {

@@ -43,6 +43,11 @@
 
 .search label svg path {
     stroke: var(--dim);
+    transition: 0.2s ease-in-out;
+}
+
+.search label:hover svg path {
+    stroke: var(--bone);
 }
 
 .search input {
@@ -54,6 +59,24 @@
     width: 275px;
     background: none;
 }
+
+#x {
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+#x svg path {
+    stroke: var(--dim);
+    transition: 0.2s ease-in-out;
+}
+
+#x:hover svg path {
+    stroke: var(--bone);
+}
+
 
 .brands {
     padding: 1rem;
