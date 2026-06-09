@@ -3,11 +3,15 @@
     width: 100%;
     text-align: center;
     position: relative;
+    overflow: hidden;
 }
 
 .hero img {
     width: 100%;
     filter: brightness(45%);
+    min-height: 300px;
+    object-fit: cover;
+    display: block;
 }
 
 .hero-text {
@@ -16,13 +20,16 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -80%);
+    width: 90%;
+    max-width: 700px;
 }
 
 .hero-text h1 {
-    font-size: 4rem;
+    font-size: clamp(2rem, 6vw, 4rem);
     font-family: "Faculty Glyphic", sans-serif;
     letter-spacing: 3px;
     margin: 1rem;
+    white-space: nowrap;
 }
 
 .search {
@@ -35,10 +42,12 @@
     box-shadow: 0 1px 1px var(--dim) inset, 0 2px 1px var(--dim);
     backdrop-filter: blur(4px);
     gap: 10px;
+    width: clamp(220px, 85%, 600px);
 }
 
 .search label {
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 .search label svg path {
@@ -55,8 +64,9 @@
     border: none;
     outline: none;
     color: var(--white);
-    font-size: 1.2rem;
-    width: 275px;
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+    width: 100%;
+    min-width: 0;
     background: none;
 }
 
@@ -85,7 +95,7 @@
 .brands h1 {
     text-align: center;
     padding: 25px;
-    font-size: 4rem;
+    font-size: clamp(2rem, 6vw, 4rem);
     font-family: "Faculty Glyphic", sans-serif;
     letter-spacing: 3px;
     margin: 1rem;
@@ -110,6 +120,10 @@
     border-radius: 15px;
     z-index: 1;
     cursor: pointer;
+    width: clamp(120px, 30vw, 400px);
+    height: clamp(120px, 30vw, 400px);
+    object-fit: contain;
+    display: block;
 }
 
 .brand-tile:hover {
@@ -120,3 +134,26 @@
     filter: brightness(70%);
 }
 
+@media (max-width: 600px) {
+    .hero-text {
+        transform: translate(-50%, -65%);
+    }
+
+    .hero img {
+        min-height: 260px;
+    }
+
+    .hero-text h1 {
+        letter-spacing: 1px;
+    }
+
+    .brands h1 {
+        padding: 12px;
+        margin: 0.5rem;
+    }
+
+    .brand-list {
+        gap: 1rem;
+        padding: 0 0.75rem;
+    }
+}

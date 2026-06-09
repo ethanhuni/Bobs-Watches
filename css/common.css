@@ -14,6 +14,8 @@
     --transparent: #00000000
 }
 
+
+
 body {
     margin: 0;
     padding: 0;
@@ -121,9 +123,26 @@ footer p {
     font-family: "DM Mono", monospace;
     color: var(--white);
     cursor: pointer;
+    font-size: clamp(0.75rem, 2vw, 1rem);
+    margin: 0;
 }
 
 footer p:hover {
     color: var(--yellow);
     text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    nav a {
+        padding: 10px;
+    }
+
+    nav a svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    footer {
+        height: 5rem;
+    }
 }
