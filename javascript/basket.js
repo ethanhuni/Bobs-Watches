@@ -6,6 +6,8 @@ const title = document.getElementById("title");
 const quantity = document.getElementById("quantity");
 const sub = document.getElementById("sub");
 
+const button = document.getElementById("buy");
+
 const VAT = 0.1;
 const SHIPPING_COST = 70;
 
@@ -100,6 +102,8 @@ function calculateTotal() {
 
 
     total = subTotal + shipping - discount;
+
+    button.disabled = (total === 0);
 
     document.getElementById("subtotal").innerHTML = format(subTotal);
     document.getElementById("shipping").innerHTML = format(shipping);

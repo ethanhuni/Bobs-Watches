@@ -140,7 +140,35 @@
             </div>
 
             <div id="order">
-                <p>Order</p>
+                <div class="field">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Name"/>
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="John@email.com"/>
+                </div>
+                <div class="field">
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" placeholder="Phone"/>
+                </div>
+                <div class="field">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" placeholder="Address"/>
+                </div>
+                <br>
+                <div class="field">
+                    <label for="card">Card Number</label>
+                    <input type="text" id="card" placeholder="Card Number"/>
+                </div>
+                <div class="field">
+                    <label for="expire">Card Expiration</label>
+                    <input type="text" id="expire" placeholder="Card Expiration"/>
+                </div>
+                <div class="field">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" placeholder="CVV"/>
+                </div>
             </div>
 
         </article>
@@ -189,7 +217,7 @@
                     <h3 id="total">$Z,ZZZ</h3>
                 </div>
 
-                <button class="buy" onclick="proceed()">
+                <button id="buy" onclick="proceed()">
                     CHECKOUT
                 </button>
             </section>

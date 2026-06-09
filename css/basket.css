@@ -173,7 +173,7 @@ table {
     margin: 0 .25rem;
 }
 
-.buy {
+#buy {
     width: 85%;
     aspect-ratio: 1 / .15;
     background-color: var(--bone);
@@ -187,8 +187,14 @@ table {
     margin: 2rem 0;
 }
 
-.buy:hover {
+#buy:hover {
     background-color: var(--yellow);
+}
+
+#buy:disabled {
+    color: var(--white);
+    background-color: var(--dim);
+    cursor: not-allowed;
 }
 
 .overview {
@@ -199,4 +205,37 @@ table {
 
 .overview span {
     color: var(--dim);
+}
+
+.field {
+    display: flex;
+    font-family: "Faculty Glyphic", sans-serif;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.field input {
+    outline: none;
+    padding: .7rem;
+    font-size: 1.2rem;
+    border: none;
+    border-bottom: 2px solid var(--graphite);
+    background-color: transparent;
+    color: var(--graphite);
+    width: 100%;
+}
+
+.field label {
+    white-space: nowrap;
+    width: 20%;
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+    color: var(--onyx);
+    transition: .2s ease-in-out;
+}
+
+.field:has(input:focus) label {
+    color: var(--yellow);
 }
