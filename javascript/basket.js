@@ -8,6 +8,8 @@ const sub = document.getElementById("sub");
 
 const button = document.getElementById("buy");
 
+
+
 const VAT = 0.1;
 const SHIPPING_COST = 70;
 
@@ -103,7 +105,6 @@ function calculateTotal() {
 
     total = subTotal + shipping - discount;
 
-    button.disabled = (total === 0);
 
     document.getElementById("subtotal").innerHTML = format(subTotal);
     document.getElementById("shipping").innerHTML = format(shipping);
@@ -119,6 +120,22 @@ function format(n) {
     return "$" + n.toLocaleString() + " AUD";
 }
 
+
+function checkFields() {
+    const n = document.getElementById("name").value.length > 0;
+    const e = document.getElementById("email").value.length > 0;
+    const p = document.getElementById("phone").value.length > 0;
+    const a = document.getElementById("address").value.length > 0;
+    const c = document.getElementById("card").value.length > 0
+    const x = document.getElementById("expire").value.length > 0;
+    const v = document.getElementById("cvv").value.length > 0;
+
+
+    button.disabled = !(n && e && p && a && c && x && v)
+
+}
+
+
 function proceed() {
     stage ++;
     switch (stage) {
@@ -126,11 +143,16 @@ function proceed() {
             order.style.display = "none";
             items.style.display = "block";
             title.innerText = TITLE_1;
+            button.disabled = (basket.length === 0);
             break;
         case 2:
             order.style.display = "block";
             items.style.display = "none";
             title.innerText = TITLE_2;
-
+            button.disabled = true;
+            button.innerText = "PURCHASE"
+            break;
+        case 3:
+            alert("Purchase!")
     }
 }
