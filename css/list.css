@@ -172,7 +172,7 @@
     justify-content: space-evenly;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
     .hero-text h1 {
         letter-spacing: 1px;
