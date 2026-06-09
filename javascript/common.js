@@ -106,3 +106,8 @@ function removeCart(idx) {
     sessionStorage.setItem("basket", JSON.stringify(basket));
 }
 
+function complete() {
+    basket = [];
+    sessionStorage.setItem("basket", JSON.stringify(basket));
+    window.location.href = "confirmation.html";
+}

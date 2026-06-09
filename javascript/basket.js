@@ -153,6 +153,6 @@ function proceed() {
             button.innerText = "PURCHASE"
             break;
         case 3:
-            alert("Purchase!")
+            complete()
     }
 }
