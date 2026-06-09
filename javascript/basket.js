@@ -1,5 +1,10 @@
 
 const code = document.getElementById("code");
+const items = document.getElementById("items");
+const order = document.getElementById("order");
+const title = document.getElementById("title");
+const quantity = document.getElementById("quantity");
+const sub = document.getElementById("sub");
 
 const VAT = 0.1;
 const SHIPPING_COST = 70;
@@ -7,7 +12,11 @@ const SHIPPING_COST = 70;
 const CODE_MSG_GOOD = "Discount Code Applied!"
 const CODE_MSG_BAD = "Invalid Discount Code?"
 
+const TITLE_1 = "Shopping Basket"
+const TITLE_2 = "Checkout"
+
 let real_discount = 0;
+let stage = 0;
 
 const COUPONS = {
     "half" : 0.5,
@@ -23,7 +32,10 @@ window.onload = function () {
             loadListing(basket[i], li)
         }
     }
+    proceed()
     calculateTotal()
+    quantity.innerText = "" + basket.length;
+    sub.innerHTML = format(CalcSubTotal());
 }
 
 function loadListing(id, li) {
@@ -44,8 +56,16 @@ function remove(idx) {
     window.location.reload();
 }
 
-function calculateTotal() {
+function CalcSubTotal() {
     let subTotal = 0;
+    for (let i = 0; i < basket.length; i++) {
+        subTotal += productRealPrice(basket[i]);
+    }
+    return subTotal;
+}
+
+function calculateTotal() {
+    let subTotal = 0
     let shipping = SHIPPING_COST;
     let tax = 0;
     let total = 0;
@@ -54,10 +74,8 @@ function calculateTotal() {
     let code_msg = "";
     let discount = 0;
 
+    subTotal = CalcSubTotal();
 
-    for (let i = 0; i < basket.length; i++) {
-        subTotal += productRealPrice(basket[i]);
-    }
     tax = Math.floor(subTotal * VAT);
 
     if (subTotal > 10000) {
@@ -98,5 +116,17 @@ function format(n) {
 }
 
 function proceed() {
-    alert("Yo!")
+    stage ++;
+    switch (stage) {
+        case 1:
+            order.style.display = "none";
+            items.style.display = "block";
+            title.innerText = TITLE_1;
+            break;
+        case 2:
+            order.style.display = "block";
+            items.style.display = "none";
+            title.innerText = TITLE_2;
+
+    }
 }

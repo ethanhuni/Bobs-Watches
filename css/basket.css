@@ -190,3 +190,13 @@ table {
 .buy:hover {
     background-color: var(--yellow);
 }
+
+.overview {
+    display: flex;
+    justify-content: space-between;
+    font-family: "DM Mono", sans-serif;
+}
+
+.overview span {
+    color: var(--dim);
+}
